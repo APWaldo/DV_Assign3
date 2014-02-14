@@ -88,9 +88,32 @@
 			 * Creating two new lists in order to later sort (one of my faves and one of the rest).
 			 */
 			
-			var myFaves = [],
-			var theRest = [],
+			var myFaves = [];
+			var theRest = [];
 			
+			/*
+			 * For every item in my list, check its type. If it's green, then add them to faves. If not, add to 
+			 * theRest. Now I will create a code that makes this happen.
+			 */
+			for(var i=0; i<myDreamTeas.length; i++) {
+			//console.log(i);
+			var currentTea = myDreamTeas [i];
+			//console.log (currentTea);
+			if (currentTea.type == "green") {
+				//console.log(currentTea);
+			//Because type is green, add the currentTea to myFaves list.
+				myFaves.push(currentTea);
+			//If not green, then add the currentCookie to theRest list.
+			} else {
+				theRest.push(currentTea);
+			} //this is the end of my if else statement.
+			} //this is the end of the for loop.
+		// Printing out the two new groups of teas.
+		console.log ("My Faves");
+		console.log(myFaves);
+		console.log("The Rest");
+		console.log(theRest);
+
 		</script>
 	</body>
 </html>
